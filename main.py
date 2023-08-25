@@ -1,5 +1,4 @@
 import cv2
-
 capture = cv2.VideoCapture(0)
 cascade = cv2.CascadeClassifier(filename="haarcascade_frontalface_default.xml")
 while True:
@@ -11,3 +10,5 @@ while True:
     cv2.imshow("Camera", im)
     if cv2.waitKey(1) == ord("q"):
         break
+capture.release()
+cv2.destroyAllWindows()
